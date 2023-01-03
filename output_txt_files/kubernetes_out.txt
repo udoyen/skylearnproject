@@ -1,3 +1,12 @@
+george@george-HP-Pavilion-Laptop-15-eg1xxx:~$ 
+->kubectl get pods -w
+NAME                              READY   STATUS    RESTARTS   AGE
+skylearn-ml-api-df4fb5887-ng6x9   1/1     Running   0          115s
+^Cgeorge@george-HP-Pavilion-Laptop-15-eg1xxx:~$ 
+->kubectl port-forward pod/skylearn-ml-api-df4fb5887-ng6x9 --address 0.0.0.0 8000:80
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+
 * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
